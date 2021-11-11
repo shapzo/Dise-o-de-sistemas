@@ -1,2 +1,2 @@
-# Dise-o-de-sistemas
+# System design
 Diseño de sistemas
