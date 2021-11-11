@@ -1,0 +1,114 @@
+/*-----Hoja de estilos del proyecto---*/
+
+/************** ajustes generales ************/
+html body {
+    background-color: #D6FDFF;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+fonts {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1000px;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 99;
+    opacity: .95;
+}
+
+.contenedor .header {
+    height: calc(100h - 55px);
+    border: 3px solid rgba(rgba(21, 0, 207, 0.5));
+}
+
+.navbar {
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    font-family: 'Mochiy Pop P One';
+    font-size: 1em;
+    /*background-color: transparent !important;*/
+}
+
+.copyright {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+}
+
+.texto_copy {
+    padding: 20px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+/**************pagina 1-> inicio**************/
+.div1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.divT{
+    text-align: center;
+    justify-content: center;
+}
+
+.h1 {
+    font-family: 'Roboto';
+    padding: 20px;
+    display: inline-block;
+    color: #0e003d;
+    font-size: 1.5em;
+}
+
+
+.texto1 {
+    font-family: 'Roboto';
+    padding: 20px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.texto1::first-letter {
+    color: #ff0000;
+    font-size: 2em;
+}
+
+.divtex {
+    align-items: center;
+    min-height: 6.25rem;
+    background-color: rgb(22, 30, 84);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.img1 {
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.div2 {
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    padding: 0px;
+}
+
+.img2 {
+    width: 100%;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
