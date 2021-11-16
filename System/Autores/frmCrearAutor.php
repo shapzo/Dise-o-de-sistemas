@@ -11,7 +11,7 @@
      <?php
      $activa = 'frmCrearAutor.php">Material autor<span class="sr-only">(current)</span>';
      global $activa;
-     require('../../includes/menus2.php');
+     require('../../includes/menus8.php');
      ?>
 
      <h1>

@@ -12,7 +12,7 @@
     <?php
      $activa='index.php">Autores<span class="sr-only">(current)</span>';
      global $activa;
-     require('../../includes/menus2.php'); ?>
+     require('../../includes/menus8.php'); ?>
 
      <!--particulas-->
     <div id="particles-js"></div>

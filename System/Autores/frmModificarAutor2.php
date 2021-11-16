@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
-<?php require('../../includes/cabeceras.php'); ?>
+<?php 
+include('../../includes/cabeceras2.php');
+ ?>
 </head>
 <body>
 <?php
      $activa='frmModificarExerno2.php">Material Externo<span class="sr-only">(current)</span>';
      global $activa;
-     require('../../includes/menus.php'); ?>
+     require('../../includes/menus8.php'); ?>
     <h1>Modificar Materiales</h1>
 
     <?php 

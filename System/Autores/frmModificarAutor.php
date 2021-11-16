@@ -2,18 +2,20 @@
 <html lang="es" dir="ltr">
 
 <head>
-    <?php require('../../includes/cabeceras.php'); ?>
+    <?php 
+    include('../../includes/cabeceras2.php');
+     ?>
 </head>
 
 <body>
     <?php
      $activa='frmModificarExterno.php">Material Externo<span class="sr-only">(current)</span>';
      global $activa;
-     require('../../includes/menus.php'); ?>
+     require('../../includes/menus8.php'); ?>
     <h1>Modificar Material Externo</h1>
 
     <?php 
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/BIBLIOTECA/includes/bd_conf.php');
+    require('../../includes/confbd.php');
     global $conexion;
     $sql="SELECT * FROM material_externo ORDER BY titulo ASC";
     $ejecucionSql=@mysqli_query($conexion,$sql);
@@ -23,7 +25,7 @@
     }
 ?>
 
-    <form action="frmModificarExterno2.php" method="post">
+    <form action="frmModificarAutor2.php" method="post">
 
         <div class="form-group">
             <label class="form-label" for="id">Seleccionar Material</label>
