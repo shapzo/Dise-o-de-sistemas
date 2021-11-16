@@ -5,7 +5,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <a class="navbar-brand" href="/Ico9/biblioteca_venas/index.php">Inico</a>
+            <a class="navbar-brand" href="index.php">Inicio</a>
             <li class="nav-item active">
                 <a class="nav-link" href="'.$activa.'"></a>
         </li>
@@ -20,7 +20,8 @@
                         <a class="dropdown-item" href="modificarMenuE1FrmLic.php">Editar</a>
                         <a class="dropdown-item" href="listarMenufrmLic.php">Listar</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="eliminarMenufrmLic.php">Eliminar</a>
+                        <a class="dropdown-item" href="frmAltaLicenciatura.php">Dar de alta</a>
+                        <a class="dropdown-item" href="frmBajaLicenciatura.php">Dar de baja</a>
                     </div>
             </li>
         </ul>

@@ -1,51 +1,103 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/htdocs/BIBLIOTECA/include/bd_conf.php');
+    require("../includes/confbd.php");
 
-function nuevo ($id_tipo_usuario,$descripcion){
-    global $conexion;
-    $sql="INSERT INTO tipoUsuarios(id_tipo_usuario,descripcion) VALUES ('$id_tipo_usuario',$descripcion')";
-    $ejecucion=@mysqli_query($conexion,$sql);
-    $relacion=array[]; //relacion es el nombre de la tabla
-    if ($ejecucion){
-        $sql2="SELECT * FROM tipoUsuarios";
-        $ejecucionConsulta=@mysqli_query($conexion,$sql2);
-    while ($registro = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)){
-           $relacion[]=$registro:
-        }
-    }
-    mysqli_close($conexion);
-    return $relacion;
-}
+    //Solo se usa si se trabaja con base de datos
 
-function modificar ($campo1,$campo2,$campoN){
-    global $conexion;
-    $sql="UPDATE tipoUsuarios SET campo1='$campo1Nuevo',campo2='$campo2',campoN=?$campoN' WHERE campo1='$campo1'";
-    $ejecucion=@mysqli_query($conexion,$sql);
-    $relacion=array(): //relacion es el nombre de la tabla
-    if($ejecucion){
-        $sql2="SELECT * FROMtipoUsuarios";
-        $ejecucionConsulta=@mysqli_query($conexion,$sql2);
-        while ($registro = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)){
-            $relacion[]=$registro:
-        }
-    }
-    mysqli_close($conexion);
-    return $relacion;
-}
-
-*/
-/* 
-function listar(){
- global $conexion;
- $relacion=array(): //relacion es el nombre de la tabla
-        $sql2="SELECT * FROM relacion";
-        $ejecucionConsulta=@mysqli_query($conexion,$sql2);
-        while ($registro = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)){
-            $relacion[]=$registro;
-
+    function nuevo($id_usuario,$id_tipo_usuario,$nombre, $apellido, $contra, $id_licenciatura, $estatus){
+        global $conexion;
+        $estatus="Alta";
+        $sql="INSERT INTO usuarios(id_usuario, id_tipo_usuario, nombre, apellido, contra, id_licenciatura, estatus) VALUES ('$id_usuario', '$id_tipo_usuario','$nombre', '$apellido', '$contra', '$id_licenciatura', '$estatus')";
+        $ejecucion=@mysqli_query($conexion,$sql);
+        $usuarios=array();//RELACION ES EL NOMBRE DE LA TABLA
+        if ($ejecucion) {
+            $sql2="SELECT * FROM usuarios WHERE estatus='Alta'";  //cambiar a la s k estan en alta
+            $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+            while ($menu = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
+                $usuarios[]=$menu;
+            }
         }
         mysqli_close($conexion);
-        return $relacion;
+        return $usuarios;
     }
-    */
+
+    function modificar($id_usuario,$nombre,$apellido,$contra){
+        global $conexion;
+        $sql="UPDATE usuarios SET nombre='$nombre', apellido='$apellido', contra='$contra' WHERE id_usuario ='$id_usuario'";
+        $ejecucion=@mysqli_query($conexion,$sql);
+        $usuarios=array();//RELACION ES EL NOMBRE DE LA TABLA
+        if ($ejecucion) {
+            $sql2="SELECT * FROM usuarios WHERE estatus='Alta'";
+            $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+            while ($valor= mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
+                $usuarios[]=$valor;
+            }
+        }
+        mysqli_close($conexion);
+        return $usuarios;
+    }
+
+
+    function listar(){
+        global $conexion;
+        $usuarios=array();//RELACION ES EL NOMBRE DE LA TABLA
+        $sql2="SELECT * FROM usuarios WHERE estatus='Alta'";
+        $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+        while ($valor = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
+            $usuarios[]=$valor;
+            }
+              mysqli_close($conexion);
+            return $usuarios;
+        }
+
+
+        function baja($id_usuario){ 
+            $estatus='baja';
+            global $conexion;
+            $sql="UPDATE usuarios SET estatus='$estatus' WHERE id_usuario='$id_usuario'";
+            $ejecucion=@mysqli_query($conexion,$sql);
+            $relacion=array(); //variable arreglo para la tabla
+            if ($ejecucion) {
+                $sql2="SELECT * FROM usuarios WHERE estatus='Alta'";
+                $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+                while ($valor = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)) {
+                    $relacion[]=$valor;
+                }
+            mysqli_close($conexion);
+            return $relacion;
+            }
+        } 
+    
+        function alta($id_usuario){ 
+            $estatus='Alta';
+            global $conexion;
+            $sql="UPDATE usuarios SET estatus='$estatus' WHERE id_usuario='$id_usuario'";
+            $ejecucion=@mysqli_query($conexion,$sql);
+            $relacion=array(); //variable arreglo para la tabla
+            if ($ejecucion) {
+                $sql2="SELECT * FROM usuarios WHERE estatus='Alta'";
+                $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+                while ($valor = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)) {
+                    $relacion[]=$valor;
+                }
+            mysqli_close($conexion);
+            return $relacion;
+            }
+        }
+
     /*
+    function elimina($id,$id_tipo_usuario,$estatus){  //ojo papi lo kambie, pero es baja
+        global $conexion;
+        $sql="UPDATE relacion SET estatus=$estatus WHERE id_usuario ='$id'";
+        $ejecucion=@mysqli_query($conexion,$sql);
+        $relacion=array();//RELACION ES EL NOMBRE DE LA TABLA
+        if ($ejecucion) {
+            $sql2="SELECT * FROM usuarios";
+            $ejecucionConsulta=@mysqli_query($conexion,$sql2);
+            while ($registro_que_sea = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
+                $relacion[]=$registro_que_sea;
+            }
+        }
+    }*/
+    
+
+?>

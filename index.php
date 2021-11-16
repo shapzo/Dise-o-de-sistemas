@@ -5,23 +5,29 @@
     <?php require('includes/cabeceras.php'); ?>
 </head>
 
-<body>
+<body background="img/img_cat.jpg">
+
+    <!--particulas-->
+    <div id="particles-js"></div>
+    <script src="js/particles.min.js"></script>
+    <script src="js/apps.js"></script>
+
     <header class="contenedor">
+
         <!--la barra de navegacion-->
         <?php
         $activa = 'index.php">Inicio<span class="sr-only">(current)</span>';
         global $activa;
-        require 'includes/NavBar.php';?>
+        require('includes/NavBar.php'); ?>
 
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        
+
         <!-- Imagen de inicio-->
         <div class="div1">
             <dir style="width: 65%;">
                 <div class="row" id="box-search">
                     <div class="thumbnail text-center">
-                        <img src="img/Img1.png" loading="lazy" style="width: 85%;"
-                            class="img-responsive img-fluid rounded img1" />
+                        <img src="img/Img1.png" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img1" />
                         <div class="caption">
                             <h2>
                                 <span class="badge badge-pill badge-primary spam1">Biblioteca</span>
