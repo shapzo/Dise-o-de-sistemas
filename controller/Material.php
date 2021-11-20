@@ -32,14 +32,18 @@
             $isbn_issn=$_POST['isbn_issn'];
             $sitio_web=$_POST['sitio_web'];
 
-            $archivouwu=$_FILES['archivo']['name'];
-            $ruta='Ico9/biblioteca_venas/System/Material/Archivos';
+            $nombre_archivo=$_FILES['archivo']['name'];
+            $tipo_archivo=$_FILES['archivo']['type'];
+            $tamano_archivo=$_FILES['archivo']['size'];
+
+            $ruta='../Archivos/';
             $subir=$ruta.basename($_FILES['archivo']['name']);
             move_uploaded_file($_FILES['archivo']['tmp_name'],$subir);
+            $archivo=$nombre_archivo;
 
             $estatus=$_POST['estatus'];
             $licencia=$_POST['licencia'];
-            $menus=nuevo($id_material,$titulo,$autor,$id_categorias,$id_editorial,$isbn_issn,$sitio_web,$archivouwu,$estatus,$licencia);
+            $menus=nuevo($id_material,$titulo,$autor,$id_categorias,$id_editorial,$isbn_issn,$sitio_web,$archivo,$estatus,$licencia);
         }
 
         elseif ($tipoMovimiento=="modificar") {

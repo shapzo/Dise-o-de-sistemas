@@ -21,9 +21,9 @@
                         <th id="th">Autor</th>
                         <th id="th">categoria</th>
                         <th id="th">Editorial</th>
-                        <th id="th">Isbn/th>
+                        <th id="th">Isbn</th>
                         <th id="th">pagina web</th>
-                        <th id="th">Archivo</th>
+                        <!--<th id="th">Archivo</th>-->
                         <th id="th">Licencia</th>
                     </tr>
                 </thead>
@@ -38,7 +38,7 @@
                         echo "<td>" . $menu['id_editorial'] . "</td>";
                         echo "<td>" . $menu['isbn_issn'] . "</td>";
                         echo "<td>" . $menu['sitio_web'] . "</td>";
-                        echo "<td>" . $menu['archivo'] . "</td>";
+                        /*echo "<td>" . $menu['archivo'] . "</td>";*/
                         echo "<td>" . $menu['licencia'] . "</td>";
                         echo "</tr>";
                     }

@@ -7,7 +7,7 @@
    ?>
 </head>
 
-<body>
+<body background="../../img/ImgWallpAutors.jpg">
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
     <?php
      $activa='index.php">Autores<span class="sr-only">(current)</span>';
@@ -16,14 +16,20 @@
 
      <!--particulas-->
     <div id="particles-js"></div>
-    <script src="../../js/particles.min.js"></script>
-    <script src="../../js/apps.js"></script>
+    <script src="../../particles/js/particles.min.js"></script>
+    <script src="../../particles/js/apps.js"></script>
 
     <!--la barra de navegacion-->
     <header class="contenedor">
 
-        <div class="divT">
-            <h1><span class="badge badge-info">Autores</span></h1>
+    <div class="div1">
+            <dir style="width: 65%;">
+                <div class="row" id="box-search">
+                    <div class="thumbnail text-center">
+                        <img src="../../img/ImgAutors.jpeg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
+                    </div>
+                </div>
+            </dir>
         </div>
 
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;

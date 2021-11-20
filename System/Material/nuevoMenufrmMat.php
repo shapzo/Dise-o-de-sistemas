@@ -66,7 +66,7 @@
           </div>
 
           <div>
-               <form class="form-horizontal" role="form" action="../../controller/Material.php" method="post">
+               <form class="form-horizontal" role="form" action="../../controller/Material.php" method="post" enctype="multipart/form-data">
                     <div class="div3">
                          <div>
                               <h3><span class="badge badge-success spam2">Ingresa los datos seleccionados</span></h3>
