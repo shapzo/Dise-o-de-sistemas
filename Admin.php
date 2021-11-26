@@ -1,3 +1,7 @@
+<?php
+include("config/security.php")
+?>
+
 <!DOCTYPE html>
 <html lang="Es">
 
@@ -48,16 +52,16 @@
         <!--imagens con movimiento-->
         <div class="div2">
             <marquee crollamount="30" direction="right">
-                <img loading="lazy" class="img2" src="img/imgport1.jpg" />
+                <img loading="lazy" class="img2" src="img/imgportuser1.jpg" />
             </marquee>
             <marquee crollamount="30" direction="right">
-                <img loading="lazy" class="img2" src="img/imgport2.jpg" />
+                <img loading="lazy" class="img2" src="img/imgportuser2.jpg" />
             </marquee>
             <marquee crollamount="30" direction="left">
-                <img loading="lazy" class="img2" src="img/imgport3.png" />
+                <img loading="lazy" class="img2" src="img/imgportuser3.jpg" />
             </marquee>
             <marquee crollamount="30" direction="left">
-                <img loading="lazy" class="img2" src="img/imgport4.jpg" />
+                <img loading="lazy" class="img2" src="img/imgportuser4.jpg" />
             </marquee>
         </div>
 
@@ -77,12 +81,20 @@
         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
     </header>
 
-    <!--Parte inferior aluciva al copyright -->
-    <div class="copyright">
-        <p class="texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p class="texto_copy">Copyright &copy; 2021 </p>
-    </div>
+    <!-- Footer-->
+    <footer class="copyright py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
