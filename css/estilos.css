@@ -122,18 +122,7 @@ fonts {
     margin-right: 0;
   }
 }
-/************** AJUSTES PARTE INFERIRO************/
-.copyright {
-  background-color: rgb(0, 0, 0);
-  text-align: center;
-  justify-content: center;
-}
 
-.texto_copy {
-  padding: 20px;
-  display: inline-block;
-  color: #ffffff;
-}
 
 /**********************************************
 * INDEX
@@ -241,7 +230,7 @@ fonts {
 
 .div-table {
   text-align: center;
-  background-color: #db5d00;
+  background-color: #009670;
   justify-content: center;
   padding: 1rem;
   -webkit-border-radius: 12px;
@@ -250,7 +239,7 @@ fonts {
 
 .table {
   font-family: "Mochiy Pop P One";
-  background-color: #00ce11;
+  background-color: #00b6ce;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }

@@ -18,22 +18,22 @@
         $id=$_POST['id'];
         require('../../includes/confbd.php');
         global $conexion;
-        $sql="SELECT * FROM licenciaturas WHERE id_licenciatura='$id'";
+        $sql="SELECT * FROM licenciaturas WHERE id_carrera='$id'";
         $ejecucionSql=@mysqli_query($conexion,$sql);
 
         while ($registro = @mysqli_fetch_array($ejecucionSql,MYSQLI_ASSOC)) {
-            $id_licenciatura=$registro['id_licenciatura'];
-            $describcion=$registro['describcion'];
+            $id_carrera=$registro['id_carrera'];
+            $descripcion=$registro['descripcion'];
         }
     ?>
     <form action="../../controller/Licenciatura.php" method="post">
         <div class="form-group">
-            <label class="form-label" for="id_licenciatura">id_licenciatura</label>
-            <input type="text" class="form-control" name="id_licenciatura" id="id_licenciatura" value="<?php echo $id_licenciatura; ?>">
+            <label class="form-label" for="id_carrera">Id Carrera</label>
+            <input type="text" class="form-control" name="id_carrera" id="id_carrera" value="<?php echo $id_carrera; ?>">
         </div>
         <div class="form-group">
-            <label class="form-label" for="describcion">T&iacute;tulo</label>
-            <input type="text" class="form-control" name="describcion" id="tutulo" value="<?php echo $describcion; ?>">
+            <label class="form-label" for="descripcion">T&iacute;tulo</label>
+            <input type="text" class="form-control" name="descripcion" id="tutulo" value="<?php echo $descripcion; ?>">
         </div>
         <input type="hidden" name="id" value="<?php echo $id ?>">
         <input type="hidden" name="tipoMovimiento" value="modificar">

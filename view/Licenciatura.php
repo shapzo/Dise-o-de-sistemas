@@ -24,8 +24,8 @@
                     <?php
                     foreach ($menus as $menu) {
                         echo "<tr>";
-                        echo "<td>" . $menu['id_licenciatura'] . "</td>";
-                        echo "<td>" . $menu['describcion'] . "</td>";
+                        echo "<td>" . $menu['id_carrera'] . "</td>";
+                        echo "<td>" . $menu['descripcion'] . "</td>";
                         echo "</tr>";
                     }
                     ?>

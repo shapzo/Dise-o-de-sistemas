@@ -3,10 +3,10 @@
 
     //Solo se usa si se trabaja con base de datos
 
-    function nuevo($id_licenciatura,$describcion,$estatus){
+    function nuevo($id_carrera,$descripcion,$estatus){
         global $conexion;
         $estatus="Alta";
-        $sql="INSERT INTO licenciaturas(id_licenciatura , describcion, estatus) VALUES ('$id_licenciatura', '$describcion','$estatus')";
+        $sql="INSERT INTO licenciaturas(id_carrera , descripcion, estatus) VALUES ('$id_carrera', '$descripcion','$estatus')";
         $ejecucion=@mysqli_query($conexion,$sql);
         $licenciaturas=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
@@ -20,9 +20,9 @@
         return $licenciaturas;
     }
 
-    function modificar($id_licenciatura,$describcion){
+    function modificar($id_carrera,$descripcion){
         global $conexion;
-        $sql="UPDATE licenciaturas SET describcion='$describcion' WHERE id_licenciatura ='$id_licenciatura'";
+        $sql="UPDATE licenciaturas SET descripcion='$descripcion' WHERE id_carrera ='$id_carrera'";
         $ejecucion=@mysqli_query($conexion,$sql);
         $licenciaturas=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
@@ -50,10 +50,10 @@
         }
 
 
-        function baja($id_licenciatura){ 
+        function baja($id_carrera){ 
             $estatus='baja';
             global $conexion;
-            $sql="UPDATE licenciaturas SET estatus='$estatus' WHERE id_licenciatura='$id_licenciatura'";
+            $sql="UPDATE licenciaturas SET estatus='$estatus' WHERE id_carrera='$id_carrera'";
             $ejecucion=@mysqli_query($conexion,$sql);
             $relacion=array(); //variable arreglo para la tabla
             if ($ejecucion) {
@@ -67,10 +67,10 @@
             }
         } 
     
-        function alta($id_licenciatura){ 
+        function alta($id_carrera){ 
             $estatus='Alta';
             global $conexion;
-            $sql="UPDATE licenciaturas SET estatus='$estatus' WHERE id_licenciatura='$id_licenciatura'";
+            $sql="UPDATE licenciaturas SET estatus='$estatus' WHERE id_carrera='$id_carrera'";
             $ejecucion=@mysqli_query($conexion,$sql);
             $relacion=array(); //variable arreglo para la tabla
             if ($ejecucion) {
@@ -85,9 +85,9 @@
         }
 
     /*
-    function elimina($id,$describcion,$estatus){  //ojo papi lo kambie, pero es baja
+    function elimina($id,$descripcion,$estatus){  //ojo papi lo kambie, pero es baja
         global $conexion;
-        $sql="UPDATE relacion SET estatus=$estatus WHERE id_licenciatura ='$id'";
+        $sql="UPDATE relacion SET estatus=$estatus WHERE id_carrera ='$id'";
         $ejecucion=@mysqli_query($conexion,$sql);
         $relacion=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {

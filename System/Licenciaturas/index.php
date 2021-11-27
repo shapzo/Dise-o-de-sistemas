@@ -30,8 +30,8 @@
 
     <!--particulas-->
     <div id="particles-js"></div>
-    <script src="../../js/particles.min.js"></script>
-    <script src="../../js/apps.js"></script>
+    <script src="../../particles/js/particles.min.js"></script>
+    <script src="../../particles/js/apps.js"></script>
 
     <!--lcontenedor-->
     <header class="contenedor">

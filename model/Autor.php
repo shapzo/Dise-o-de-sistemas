@@ -1,9 +1,9 @@
 <?php
     require($_SERVER['DOCUMENT_ROOT'] . '/Ico9/biblioteca_venas/includes/confbd.php');
 
-    function nuevo($id_material,$id_autor,$nombre, $apellido){
+    function nuevo($id_material,$id_autor,$nombre, $apellidos){
          global $conexion;
-         $sql="INSERT INTO autores (id_material,id_autor,nombre, apellido) VALUES ('$id_material','$id_autor','$nombre','$apellido')";
+         $sql="INSERT INTO autores (id_material,id_autor,nombre, apellidos) VALUES ('$id_material','$id_autor','$nombre','$apellidos')";
             $ejecucion=@mysqli_query($conexion,$sql);
             $autores=array(); //relacion es el nombre de la tabla
     if ($ejecucion) {
@@ -16,9 +16,9 @@
         mysqli_close($conexion);
         return $autores;
     }
-    function modificar($id_material,$id_autor,$nombre, $apellido){
+    function modificar($id_material,$id_autor,$nombre, $apellidos){
         global $conexion;
-        $sql="UPDATE autores SET id_autor='$id_autor', nombre, apellido='$nombre, apellido' WHERE id_material='$id_material'";   
+        $sql="UPDATE autores SET id_autor='$id_autor', nombre, apellido='$nombre, $apellidos' WHERE id_material='$id_material'";   
         $ejecucion=@mysqli_query($conexion,$sql);
         $autores=array(); //relacion es el nombre de la tabla
         if ($ejecucion) {

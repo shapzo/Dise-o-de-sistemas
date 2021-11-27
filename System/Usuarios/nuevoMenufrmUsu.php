@@ -7,10 +7,10 @@
      ?>
 </head>
 
-<body>
-     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<body background="../../img/ImgWallpAutors.jpg">
+     
      <?php
-     $activa = 'nuevoMenufrmUsu.php">Nuevo licenciatura<span class="sr-only">(current)</span>';
+     $activa = 'nuevoMenufrmUsu.php">Nuevo usuario<span class="sr-only">(current)</span>';
      global $activa;
      require('../../includes/menus2.php');
      ?>
@@ -19,30 +19,30 @@
     global $conexion;
     mysqli_set_charset($conexion, 'utf8');
 
-    $sql1 = "SELECT * FROM licenciaturas ORDER BY describcion ASC";
+    $sql1 = "SELECT * FROM licenciaturas ORDER BY descripcion ASC";
     $resultado = mysqli_query($conexion, $sql1);
     while ($licenciaturas = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-        @$listaLic .= "<option value  = $licenciaturas[describcion]>$licenciaturas[describcion]</option>";
+        @$listaLic .= "<option value  = $licenciaturas[descripcion]>$licenciaturas[descripcion]</option>";
     }
 
-    $sql2 = "SELECT * FROM tipodeusuario ORDER BY descripcion ASC ";
+    $sql2 = "SELECT * FROM tipousuario ORDER BY descripcion ASC ";
     $resultado1 = mysqli_query($conexion, $sql2);
-    while ($tipodeusuario = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
-        @$listaTipo .= "<option value  = $tipodeusuario[id_tipo_usuario]>$tipodeusuario[id_tipo_usuario]</option>";
+    while ($tipousuario = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+        @$listaTipo .= "<option value  = $tipousuario[id_tipo_usuario]>$tipousuario[id_tipo_usuario]</option>";
     }
 
-    $sql2 = "SELECT * FROM tipodeusuario ORDER BY descripcion ASC ";
+    $sql2 = "SELECT * FROM tipousuario ORDER BY descripcion ASC ";
     $resultado1 = mysqli_query($conexion, $sql2);
-    while ($tipodeusuario = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
-     @$listausu .= "<option value  = $tipodeusuario[descripcion]>$tipodeusuario[descripcion]</option>";
+    while ($tipousuario = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+     @$listausu .= "<option value  = $tipousuario[descripcion]>$tipousuario[descripcion]</option>";
     }
     mysqli_close($conexion);
     ?>
 
      <!--particulas-->
-     <div id="particles-js"></div>
-     <script src="../../js/particles.min.js"></script>
-     <script src="../../js/apps.js"></script>
+    <div id="particles-js"></div>
+    <script src="../../particles/js/particles.min.js"></script>
+    <script src="../../particles/js/apps.js"></script>
 
      <!--lcontenedor-->
      <header class="contenedor">
@@ -51,7 +51,7 @@
                <dir style="width: 65%;">
                     <div class="row" id="box-search">
                          <div class="thumbnail text-center">
-                              <img src="../../img/lisc_!.jpg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
+                              <img src="../../img/ImgAutors.jpeg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
                               <div class="caption">
                                    <h2>
                                         <span class="badge badge-pill badge-dark spam1">Tabla</span>
@@ -80,22 +80,22 @@
                                     ?>
                               </div>
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="id_tipo_usuario">Tipo de usuario</label>
-                                   <?php
-                                    echo '<select class="form-control" id="id_tipo_usuario inputSeleccionado" name="id_tipo_usuario">' . $listausu . '</select>';
-                                    ?>
-                              </div>
-                              <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="nombre">Nombre</label>
                                    <input type="text" class="form-control" name="nombre" id="nombre">
                               </div>
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="apellido">Apellido</label>
-                                   <input type="text" class="form-control" name="apellido" id="apellido">
+                                   <label class="form-label" for="apellidos">Apellido</label>
+                                   <input type="text" class="form-control" name="apellidos" id="apellidos">
                               </div>
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="contra">Contraseña</label>
-                                   <input type="text" class="form-control" name="contra" id="contra">
+                                   <input type="password" class="form-control" name="contra" id="contra" autocomplete="off">
+                              </div>
+                              <div class="form-group table table-striped table-hover">
+                                   <label class="form-label" for="id_tipo_usuario">Tipo de usuario</label>
+                                   <?php
+                                    echo '<select class="form-control" id="id_tipo_usuario inputSeleccionado" name="id_tipo_usuario">' . $listausu . '</select>';
+                                    ?>
                               </div>
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="id_licenciatura">Licenciatura</label>
@@ -118,12 +118,20 @@
 
      </header>
 
-     <!--Parte inferior aluciva al copyright -->
-     <div class="copyright">
-          <p class="texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</p>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <p class="texto_copy">Copyright &copy; 2021 </p>
-     </div>
+     <!-- Footer-->
+  <footer class="copyright py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

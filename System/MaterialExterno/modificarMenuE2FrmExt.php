@@ -25,7 +25,7 @@
         $id_externo = $registro['id_externo'];
         $titulo = $registro['titulo'];
         $sitio_web = $registro['sitio_web'];
-        $id_categoria = $registro['id_categoria'];
+        
     }
     ?>
     <form action="../../controller/MaterialExterno.php" method="post">
@@ -41,11 +41,7 @@
             <label class="form-label" for="sitio_web">Sitio web</label>
             <input type="web" class="form-control" name="sitio_web" id="sitio_web" value="<?php echo $titulo; ?>">
         </div>
-        <div class="form-group">
-            <label class="form-label" for="id_categoria">Clave de la categoria</label>
-            <input type="web" class="form-control" name="id_categoria" id="id_categoria" value="<?php echo $titulo; ?>">
-        </div>
-
+        
         <input type="hidden" name="id" value="<?php echo $id ?>">
         <input type="hidden" name="tipoMovimiento" value="modificar">
         <input class="btn btn-primary" type="submit" name="guardar" value="Modificar">

@@ -18,7 +18,7 @@
     $id = $_POST['id'];
     require('../../includes/confbd.php');
     global $conexion;
-    $sql = "SELECT * FROM tipodeusuario WHERE id_tipo_usuario='$id'";
+    $sql = "SELECT * FROM tipousuario WHERE id_tipo_usuario='$id'";
     $ejecucionSql = @mysqli_query($conexion, $sql);
 
     while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {

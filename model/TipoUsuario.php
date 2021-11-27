@@ -6,58 +6,58 @@
     function nuevo($id_tipo_usuario, $descripcion, $estatus){
         global $conexion;
         $estatus="Alta";
-        $sql="INSERT INTO tipodeusuario(id_tipo_usuario, descripcion, estatus) VALUES ('$id_tipo_usuario','$descripcion', '$estatus')";
+        $sql="INSERT INTO tipousuario(id_tipo_usuario, descripcion, estatus) VALUES ('$id_tipo_usuario','$descripcion', '$estatus')";
         $ejecucion=@mysqli_query($conexion,$sql);
-        $tipodeusuario=array();//RELACION ES EL NOMBRE DE LA TABLA
+        $tipousuario=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
-            $sql2="SELECT * FROM tipodeusuario WHERE estatus='Alta'";  //cambiar a la s k estan en alta
+            $sql2="SELECT * FROM tipousuario WHERE estatus='Alta'";  //cambiar a la s k estan en alta
             $ejecucionConsulta=@mysqli_query($conexion,$sql2);
             while ($menu = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
-                $tipodeusuario[]=$menu;
+                $tipousuario[]=$menu;
             }
         }
         mysqli_close($conexion);
-        return $tipodeusuario;
+        return $tipousuario;
     }
 
     function modificar($id_tipo_usuario, $descripcion){
         global $conexion;
-        $sql="UPDATE tipodeusuario SET id_tipo_usuario='$id_tipo_usuario' WHERE descripcion ='$descripcion'";
+        $sql="UPDATE tipousuario SET id_tipo_usuario='$id_tipo_usuario' WHERE descripcion ='$descripcion'";
         $ejecucion=@mysqli_query($conexion,$sql);
-        $tipodeusuario=array();//RELACION ES EL NOMBRE DE LA TABLA
+        $tipousuario=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
-            $sql2="SELECT * FROM tipodeusuario WHERE estatus='Alta'";
+            $sql2="SELECT * FROM tipousuario WHERE estatus='Alta'";
             $ejecucionConsulta=@mysqli_query($conexion,$sql2);
             while ($vale= mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
-                $tipodeusuario[]=$vale;
+                $tipousuario[]=$vale;
             }
         }
         mysqli_close($conexion);
-        return $tipodeusuario;
+        return $tipousuario;
     }
 
 
     function listar(){
         global $conexion;
-        $tipodeusuario=array();//RELACION ES EL NOMBRE DE LA TABLA
-        $sql2="SELECT * FROM tipodeusuario WHERE estatus='Alta'";
+        $tipousuario=array();//RELACION ES EL NOMBRE DE LA TABLA
+        $sql2="SELECT * FROM tipousuario WHERE estatus='Alta'";
         $ejecucionConsulta=@mysqli_query($conexion,$sql2);
         while ($valor = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
-            $tipodeusuario[]=$valor;
+            $tipousuario[]=$valor;
             }
               mysqli_close($conexion);
-            return $tipodeusuario;
+            return $tipousuario;
         }
 
 
         function baja($id_tipo_usuario){ 
             $estatus='baja';
             global $conexion;
-            $sql="UPDATE tipodeusuario SET estatus='$estatus' WHERE id_tipo_usuario='$id_tipo_usuario'";
+            $sql="UPDATE tipousuario SET estatus='$estatus' WHERE id_tipo_usuario='$id_tipo_usuario'";
             $ejecucion=@mysqli_query($conexion,$sql);
             $relacion=array(); //variable arreglo para la tabla
             if ($ejecucion) {
-                $sql2="SELECT * FROM tipodeusuario WHERE estatus='Alta'";
+                $sql2="SELECT * FROM tipousuario WHERE estatus='Alta'";
                 $ejecucionConsulta=@mysqli_query($conexion,$sql2);
                 while ($valor = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)) {
                     $relacion[]=$valor;
@@ -70,11 +70,11 @@
         function alta($id_tipo_usuario){ 
             $estatus='Alta';
             global $conexion;
-            $sql="UPDATE tipodeusuario SET estatus='$estatus' WHERE id_tipo_usuario='$id_tipo_usuario'";
+            $sql="UPDATE tipousuario SET estatus='$estatus' WHERE id_tipo_usuario='$id_tipo_usuario'";
             $ejecucion=@mysqli_query($conexion,$sql);
             $relacion=array(); //variable arreglo para la tabla
             if ($ejecucion) {
-                $sql2="SELECT * FROM tipodeusuario WHERE estatus='Alta'";
+                $sql2="SELECT * FROM tipousuario WHERE estatus='Alta'";
                 $ejecucionConsulta=@mysqli_query($conexion,$sql2);
                 while ($valor = mysqli_fetch_array($ejecucionConsulta,MYSQLI_ASSOC)) {
                     $relacion[]=$valor;
@@ -91,7 +91,7 @@
         $ejecucion=@mysqli_query($conexion,$sql);
         $relacion=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
-            $sql2="SELECT * FROM tipodeusuario";
+            $sql2="SELECT * FROM tipousuario";
             $ejecucionConsulta=@mysqli_query($conexion,$sql2);
             while ($registro_que_sea = mysqli_fetch_array($ejecucionConsulta, MYSQLI_ASSOC)) {//menu ES ES CUALQUIER CAMPO QUE SE QUIERA CONSULTAR
                 $relacion[]=$registro_que_sea;

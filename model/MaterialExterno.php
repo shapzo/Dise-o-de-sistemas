@@ -3,10 +3,10 @@
 
     //Solo se usa si se trabaja con base de datos
 
-    function nuevo($id_externo,$titulo,$sitio_web,$estatus,$id_categoria){
+    function nuevo($id_externo,$titulo,$sitio_web,$estatus){
         global $conexion;
         $estatus="Alta";
-        $sql="INSERT INTO material_externo (id_externo, titulo, sitio_web, estatus, id_categoria) VALUES ('$id_externo', '$titulo','$sitio_web','$estatus','$id_categoria')";
+        $sql="INSERT INTO material_externo (id_externo, titulo, sitio_web, estatus) VALUES ('$id_externo', '$titulo','$sitio_web','$estatus')";
         $ejecucion=@mysqli_query($conexion,$sql);
         $material_externo=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
@@ -20,9 +20,9 @@
         return $material_externo;
     }
 
-    function modificar($id_externo,$titulo,$sitio_web,$id_categoria){
+    function modificar($id_externo,$titulo,$sitio_web){
         global $conexion;
-        $sql="UPDATE material_externo SET titulo='$titulo' sitio_web='$sitio_web' id_categoria='$id_categoria' WHERE id_externo ='$id_externo'";
+        $sql="UPDATE material_externo SET titulo='$titulo' sitio_web='$sitio_web'  WHERE id_externo ='$id_externo'";
         $ejecucion=@mysqli_query($conexion,$sql);
         $material_externo=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {

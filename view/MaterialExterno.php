@@ -19,7 +19,7 @@
                         <th id="th">Clave</th>
                         <th id="th">Nombre del material</th>
                         <th id="th">Pagina web</th>
-                        <th id="th">Clave de la categoria</th>
+                        
                     </tr>
                 </thead>
                 <tbody id="body">
@@ -29,7 +29,7 @@
                         echo "<td>" . $menu['id_externo'] . "</td>";
                         echo "<td>" . $menu['titulo'] . "</td>";
                         echo "<td>" . $menu['sitio_web'] . "</td>";
-                        echo "<td>" . $menu['id_categoria'] . "</td>";
+                        
                         echo "</tr>";
                     }
                     ?>

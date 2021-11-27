@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="contra">Contraseña</label>
-            <input type="text" class="form-control" name="contra" id="tutulo" value="<?php echo $contra; ?>">
+            <input type="password" class="form-control" name="contra" id="tutulo" value="<?php echo $contra; ?>">
         </div>
         <input type="hidden" name="id" value="<?php echo $id ?>">
         <input type="hidden" name="tipoMovimiento" value="modificar">

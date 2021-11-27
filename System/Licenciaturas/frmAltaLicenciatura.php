@@ -7,17 +7,17 @@
     ?>
 </head>
 
-<body>
-    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<body background="../../img/ImgWallpAutors.jpg">
+    
     <?php
     $activa = 'frmAltaLicenciatura.php">Dar de alta<span class="sr-only">(current)</span>';
     global $activa;
     require('../../includes/menus.php'); ?>
 
-    <!--particulas-->
-    <div id="particles-js"></div>
-    <script src="../../js/particles.min.js"></script>
-    <script src="../../js/apps.js"></script>
+   <!--particulas-->
+   <div id="particles-js"></div>
+    <script src="../../particles/js/particles.min.js"></script>
+    <script src="../../particles/js/apps.js"></script>
 
     <!--lcontenedor-->
     <header class="contenedor">
@@ -25,7 +25,7 @@
             <dir style="width: 65%;">
                 <div class="row" id="box-search">
                     <div class="thumbnail text-center">
-                        <img src="../../img/lisc_!.jpg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
+                        <img src="../../img/ImgAutors.jpeg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
                         <div class="caption">
                             <h2>
                                 <span class="badge badge-pill badge-dark spam1">Dar de alta</span>
@@ -42,11 +42,11 @@
         <?php
         require('../../includes/confbd.php');
         global $conexion;
-        $sql = "SELECT * FROM licenciaturas WHERE estatus = 'baja' ORDER BY describcion ASC";
+        $sql = "SELECT * FROM licenciaturas WHERE estatus = 'baja' ORDER BY descripcion ASC";
         $ejecucionSql = @mysqli_query($conexion, $sql);
         $menus = "";
         while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {
-            @$menus .= "<option value= $registro[id_licenciatura]>$registro[describcion]</option>";
+            @$menus .= "<option value= $registro[id_carrera]>$registro[descripcion]</option>";
         }
         ?>
 
@@ -68,12 +68,20 @@
 
     </header>
 
-    <!--Parte inferior aluciva al copyright -->
-    <div class="copyright">
-        <p class="texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p class="texto_copy">Copyright &copy; 2021 </p>
-    </div>
+    <!-- Footer-->
+  <footer class="copyright py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

@@ -18,7 +18,7 @@
     $id = $_POST['id'];
     require('../../includes/confbd.php');
     global $conexion;
-    $sql = "SELECT * FROM editorial WHERE id_editorial='$id'";
+    $sql = "SELECT * FROM editoriales WHERE id_editorial='$id'";
     $ejecucionSql = @mysqli_query($conexion, $sql);
 
     while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {

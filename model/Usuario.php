@@ -3,10 +3,14 @@
 
     //Solo se usa si se trabaja con base de datos
 
-    function nuevo($id_usuario,$id_tipo_usuario,$nombre, $apellido, $contra, $id_licenciatura, $estatus){
+    function nuevo($id_usuario,$nombre, $apellidos, $contra, $id_tipo_usuario, $id_licenciatura, $estatus){
         global $conexion;
         $estatus="Alta";
-        $sql="INSERT INTO usuarios(id_usuario, id_tipo_usuario, nombre, apellido, contra, id_licenciatura, estatus) VALUES ('$id_usuario', '$id_tipo_usuario','$nombre', '$apellido', '$contra', '$id_licenciatura', '$estatus')";
+        //sha1(string $str, bool $raw_output = true ): string
+         //md5(string $str, bool $raw_output = false): string
+         //crypt(string $str, string $salt = ?): string
+        $contras=sha1($contra);
+        $sql="INSERT INTO usuarios(id_usuario, nombre, apellidos, contra, id_tipo_usuario, id_licenciatura, estatus) VALUES ('$id_usuario','$nombre', '$apellidos', '$contras', '$id_tipo_usuario', '$id_licenciatura', '$estatus')";
         $ejecucion=@mysqli_query($conexion,$sql);
         $usuarios=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {
@@ -20,9 +24,9 @@
         return $usuarios;
     }
 
-    function modificar($id_usuario,$nombre,$apellido,$contra){
+    function modificar($id_usuario,$nombre,$apellidos,$contra){
         global $conexion;
-        $sql="UPDATE usuarios SET nombre='$nombre', apellido='$apellido', contra='$contra' WHERE id_usuario ='$id_usuario'";
+        $sql="UPDATE usuarios SET nombre='$nombre', apellidos='$apellidos', contra='$contra' WHERE id_usuario ='$id_usuario'";
         $ejecucion=@mysqli_query($conexion,$sql);
         $usuarios=array();//RELACION ES EL NOMBRE DE LA TABLA
         if ($ejecucion) {

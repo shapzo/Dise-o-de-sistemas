@@ -7,8 +7,8 @@
      ?>
 </head>
 
-<body>
-     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<body background="../../img/ImgWallpAutors.jpg">
+     
      <?php
      $activa = 'nuevoMenufrmLic.php">Nuevo licenciatura<span class="sr-only">(current)</span>';
      global $activa;
@@ -16,9 +16,9 @@
      ?>
 
      <!--particulas-->
-     <div id="particles-js"></div>
-     <script src="../../js/particles.min.js"></script>
-     <script src="../../js/apps.js"></script>
+    <div id="particles-js"></div>
+    <script src="../../particles/js/particles.min.js"></script>
+    <script src="../../particles/js/apps.js"></script>
 
      <!--lcontenedor-->
      <header class="contenedor">
@@ -27,7 +27,7 @@
                <dir style="width: 65%;">
                     <div class="row" id="box-search">
                          <div class="thumbnail text-center">
-                              <img src="../../img/lisc_!.jpg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
+                              <img src="../../img/ImgAutors.jpeg" loading="lazy" style="width: 85%;" class="img-responsive img-fluid rounded img3" />
                               <div class="caption">
                                    <h2>
                                         <span class="badge badge-pill badge-dark spam1">Tabla</span>
@@ -50,12 +50,12 @@
 
                          <div class="form-group div-table">
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="id_licenciatura">Id</label>
-                                   <input type="text" class="form-control" name="id_licenciatura" id="id_licenciatura">
+                                   <label class="form-label" for="id_carrera">Id</label>
+                                   <input type="text" class="form-control" name="id_carrera" id="id_carrera">
                               </div>
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="describcion">Describcion</label>
-                                   <input type="text" class="form-control" name="describcion" id="describcion">
+                                   <label class="form-label" for="descripcion">Descripcion</label>
+                                   <input type="text" class="form-control" name="descripcion" id="descripcion">
                               </div>
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="estatus">Estatus</label>
@@ -72,12 +72,20 @@
 
      </header>
 
-     <!--Parte inferior aluciva al copyright -->
-     <div class="copyright">
-          <p class="texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</p>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <p class="texto_copy">Copyright &copy; 2021 </p>
-     </div>
+     <!-- Footer-->
+     <footer class="copyright py-4">
+          <div class="container">
+               <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                         <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
+                         <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                    </div>
+               </div>
+          </div>
+     </footer>
 </body>
 
 </html>

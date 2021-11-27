@@ -27,7 +27,7 @@
                     foreach ($menus as $menu) {
                         echo "<tr>";
                         echo "<td>" . $menu['nombre'] . "</td>";
-                        echo "<td>" . $menu['apellido'] . "</td>";
+                        echo "<td>" . $menu['apellidos'] . "</td>";
                         echo "<td>" . $menu['contra'] . "</td>";
                         echo "<td>" . $menu['id_licenciatura'] . "</td>";
                         echo "</tr>";
