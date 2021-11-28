@@ -472,6 +472,56 @@
                                 <p class="item-intro text-muted">Solo disponibles los que estan a la vista</p>
                                 <img class="img-fluid d-block mx-auto" src="../img/autors6.jpg" alt="..." />
 
+                                <section class="section1">
+                                    <article>
+                                        <a href="libro1.php">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors1.jpg" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                    <article>
+                                        <a href="#">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors2.jpg" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                    <article>
+                                        <a href="#">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors3.jpg" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                    <article>
+                                        <a href="#">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors4.jpg" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                    <article>
+                                        <a href="#">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors5.png" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                    <article>
+                                        <a href="#">
+                                            <figure>
+                                                <img loading="lazy" src="../img/autors6.jpg" />
+                                                <figcaption>Libro de php</figcaption>
+                                            </figure>
+                                        </a>
+                                    </article>
+                                </section>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
                                     Cerrar
