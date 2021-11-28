@@ -6,12 +6,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       
-      <a class="nav-item nav-link" href="User/Autores.php">Autores</a>
-      <a class="nav-item nav-link" href="User/Editoriales.php">Editoriales</a>
-      <a class="nav-item nav-link" href="User/Libros.php">Libros</a>
-
-      <a class="nav-item nav-link" href="User/Revistas.php">Revistas</a>
-      <a class="nav-item nav-link" href="User/MaterialExterno.php">Material Externo</a>     
+      <a class="nav-item nav-link" href="User/Todo.php">Selecciona el area de su interes</a>
+          
     </div>
     
   </div>
