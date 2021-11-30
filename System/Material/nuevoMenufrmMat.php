@@ -19,19 +19,19 @@
     global $conexion;
     mysqli_set_charset($conexion, 'utf8');
 
-    $sql1 = "SELECT * FROM categoria ORDER BY id_categoria ASC";
+    $sql1 = "SELECT * FROM categorias ORDER BY id_categoria ASC";
     $resultado = mysqli_query($conexion, $sql1);
     while ($categoria = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
         @$listaCat .= "<option value  = $categoria[id_categoria]>$categoria[descripcion]</option>";
     }
 
-    $sql2 = "SELECT * FROM editorial ORDER BY descripcion ASC ";
+    $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
     $resultado1 = mysqli_query($conexion, $sql2);
     while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
         @$listaEdit .= "<option value  = $editorial[id_editorial]>$editorial[descripcion]</option>";
     }
 
-    $sql2 = "SELECT * FROM editorial ORDER BY descripcion ASC ";
+    $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
     $resultado1 = mysqli_query($conexion, $sql2);
     while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
      @$listaedit.= "<option value  = $editorial[sitio_web]>$editorial[sitio_web]</option>";
@@ -74,29 +74,36 @@
 
                          <div class="form-group div-table">
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="id_material">Id de material</label>
+                                   <label class="form-label" for="id_material">Id material</label>
                                    <input type="text" class="form-control" name="id_material" id="id_material">
                               </div>
+
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="titulo">Titulo</label>
                                    <input type="text" class="form-control" name="titulo" id="titulo">
                               </div>
+
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="autor">Autor</label>
-                                   <input type="text" class="form-control" name="autor" id="autor">
-                              </div>
-                              <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="id_categorias">categoria</label>
+                                   <label class="form-label" for="id_categoria">categoria</label>
                                    <?php
-                                    echo '<select class="form-control" id="id_categorias inputSeleccionado" name="id_categorias">' . $listaCat . '</select>';
+                                    echo '<select class="form-control" id="id_categoria inputSeleccionado" name="id_categoria">' . $listaCat . '</select>';
                                     ?>
                               </div>
+
+                              <!--<div class="form-group table table-striped table-hover">
+                                   <label class="form-label" for="autor">Autor</label>
+                                   <input type="text" class="form-control" name="autor" id="autor">
+                              </div>-->
+
+                              
+
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="id_editorial">Editorial</label>
                                    <?php
                                     echo '<select class="form-control" id="id_editorial inputSeleccionado" name="id_editorial">' . $listaEdit . '</select>';
                                     ?>
                               </div>
+
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="isbn_issn">Isbn</label>
                                    <input type="text" class="form-control" name="isbn_issn" id="isbn_issn">
@@ -112,13 +119,14 @@
                                    <input type="file" class="form-control" name="archivo" id="archivo">
                               </div>
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="estatus">Estatus</label>
-                                   <input type="text" class="form-control" name="estatus" id="estatus">
-                              </div>
-                              <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="licencia">Licencia</label>
                                    <input type="text" class="form-control" name="licencia" id="licencia">
                               </div>
+                              <div class="form-group table table-striped table-hover">
+                                   <label class="form-label" for="estatus">Estatus</label>
+                                   <input type="text" class="form-control" name="estatus" id="estatus">
+                              </div>
+                              
 
                               <input type="hidden" name="tipoMovimiento" value="nuevo">
                               <input class="btn btn-primary" type="submit" name="Guardar" value="Guardar">
@@ -139,7 +147,7 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
-                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca </a>
                 </div>
             </div>
         </div>

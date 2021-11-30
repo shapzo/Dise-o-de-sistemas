@@ -18,6 +18,8 @@
                     <tr id="tr">
                         <th id="th">Id de material</th>
                         <th id="th">Titulo</th>
+                        <th id="th">categoria</th>
+                        <th id="th">editorial</th>
                         
                         <th id="th">Isbn</th>
                         <th id="th">pagina web</th>
@@ -31,7 +33,8 @@
                         echo "<tr>";
                         echo "<td>" . $menu['id_material'] . "</td>";
                         echo "<td>" . $menu['titulo'] . "</td>";
-                        
+                        echo "<td>" . $menu['id_categoria'] . "</td>";
+                        echo "<td>" . $menu['id_editorial'] . "</td>";
                         echo "<td>" . $menu['isbn_issn'] . "</td>";
                         echo "<td>" . $menu['sitio_web'] . "</td>";
                         /*echo "<td>" . $menu['archivo'] . "</td>";*/

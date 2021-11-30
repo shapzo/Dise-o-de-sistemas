@@ -125,8 +125,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
     <div class="div1">
-        <input type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+        <input class="btn btn-primary btn-xl text-uppercase" type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
     </div>
+
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
     <!-- Footer-->
@@ -138,7 +139,7 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
-                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca RiUaemex</a>
                 </div>
             </div>
         </div>
@@ -474,54 +475,55 @@
 
                                 <section class="section1">
                                     <article>
-                                        <a href="libro1.php">
+                                        <a href="../Archivos/python.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors1.jpg" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros1.png" />
+                                                <figcaption>Libro de Python</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="#">
+                                        <a href="../Archivos/computoevolutivo.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors2.jpg" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros2.jpeg" />
+                                                <figcaption>Libro de Computo Evolutivo</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="#">
+                                        <a href="../Archivos/Tanenbaum-Sistemas-Operativos-Distribuidos.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors3.jpg" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros3.jpg" />
+                                                <figcaption>Libro de Tanenbaum, Sistemas Operativos Distribuidos</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="#">
+                                        <a href="../Archivos/DispositivosElectronicos-Floyd8Edi.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors4.jpg" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros4.jpg" />
+                                                <figcaption>Libro de php DispositivosElectronicos-Floyd8Edi.</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="#">
+                                        <a href="../Archivos/MCIinC.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors5.png" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros5.jpg" />
+                                                <figcaption>Libro de php MCIinC</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="#">
+                                        <a href="../Archivos/UNEDConstrucciondecompiladoresprincipiosypractica-KennethCLouden-International_ThomsonEditores-2004.pdf">
                                             <figure>
-                                                <img loading="lazy" src="../img/autors6.jpg" />
-                                                <figcaption>Libro de php</figcaption>
+                                                <img loading="lazy" src="../img/libros6.jpg" />
+                                                <figcaption>Libro de UNED Construccionde compiladores principios y practica Kenneth C Louden</figcaption>
                                             </figure>
                                         </a>
                                     </article>
                                 </section>
+
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
                                     Cerrar

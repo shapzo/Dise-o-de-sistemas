@@ -23,8 +23,8 @@
         if ($tipoMovimiento == "nuevo") {
             $id_material = $_POST['id_material'];
             $titulo = $_POST['titulo'];
-            $autor = $_POST['autor'];
-            $id_categorias = $_POST['id_categorias'];
+            /*$autor = $_POST['autor'];*/
+            $id_categoria = $_POST['id_categoria'];
             $id_editorial = $_POST['id_editorial'];
             $isbn_issn = $_POST['isbn_issn'];
             $sitio_web = $_POST['sitio_web'];
@@ -38,15 +38,18 @@
             move_uploaded_file($_FILES['archivo']['tmp_name'], $subir);
             $archivo = $nombre_archivo;
 
-            $estatus = $_POST['estatus'];
             $licencia = $_POST['licencia'];
-            $menus = nuevo($id_material, $titulo, $autor, $id_categorias, $id_editorial, $isbn_issn, $sitio_web, $archivo, $estatus, $licencia);
-        } elseif ($tipoMovimiento == "modificar") {
+            $estatus = $_POST['estatus'];
+            
+            $menus = nuevo($id_material, $titulo, /*$autor,*/ $id_categoria, $id_editorial, $isbn_issn, $sitio_web, $archivo, $licencia, $estatus);
 
+
+        } elseif ($tipoMovimiento == "modificar") {
             $autor = $_POST['autor'];
-            $id_categorias = $_POST['id_categorias'];
+            $id_categoria = $_POST['id_categoria'];
             $id_editorial = $_POST['id_editorial'];
-            $menus = modificar($autor, $id_categorias, $id_editorial);
+            $menus = modificar($autor, $id_categoria, $id_editorial);
+            
         } elseif ($tipoMovimiento == "listar") {
             $menus = listar();
         } elseif ($tipoMovimiento == "baja") {
@@ -65,7 +68,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
     <div class="div1">
-        <input type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+        <input class="btn btn-primary btn-xl text-uppercase" type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
     </div>
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 

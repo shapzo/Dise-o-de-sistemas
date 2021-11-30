@@ -40,7 +40,7 @@
         <?php
         require('../../includes/confbd.php');
         global $conexion;
-        $sql = "SELECT * FROM usuarios ORDER BY id_usuario  ASC";
+        $sql = "SELECT * FROM usuarios ORDER BY id_usuario ASC";
         $ejecucionSql = @mysqli_query($conexion, $sql);
         $opcion = "";
         while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
-                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca Pedros</a>
+                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca RiUaemex</a>
                 </div>
             </div>
         </div>

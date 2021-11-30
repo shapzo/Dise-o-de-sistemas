@@ -371,6 +371,72 @@ fonts {
 
 /*********************************************
 * 
+* AREA  DE LA REPRESENTACION DE LOS PDF´S
+*
+**********************************************/
+
+.divframe {
+  text-align: center;
+  justify-content: center;
+}
+
+.frame {
+  height: 700px;
+  width: 1200px;
+}
+
+/************IMAGENES DE LOS PDF***************/
+.section1 {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 960px;
+  column-count: 3;
+}
+
+article {
+  background: #6affdf;
+  border-radius: 10px;
+  border: 5px solid #5d51ff;
+  margin: 0 0 20px 0;
+  text-align: center;
+  max-width: 100%;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+article img {
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  filter: blur(2px);
+}
+
+article img:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  filter: blur(0px);
+}
+
+article:hover {
+  transition: 0.10s ease;
+  filter: blur(0px);
+}
+
+figure {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+figcaption {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1em;
+}
+
+/*********************************************
+* 
 * AREA  DEL FOOTER
 *
 **********************************************/

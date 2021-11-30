@@ -36,7 +36,7 @@
             </dir>
         </div>
 
-        <form action="../../controller/Licenciatura.php" method="post">
+        <form action="../../controller/Categoria.php" method="post">
             <input type="hidden" name="tipoMovimiento" value="listar">
             <input class="btn btn-primary" type="submit" name="guardar" value="Guardar">
             <!--button type="submit" class="btn btn-primary">submit</button>

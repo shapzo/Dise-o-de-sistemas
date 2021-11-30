@@ -19,9 +19,7 @@
         <center><img src="img/logo.png" width=150 height=150 /><br></center>
         <input type="text" name="usuario" class="input-block-level" placeholder="Usuario" autocomplete="off">
         <input type="password" name="contra" class="input-block-level" placeholder="Contraseña" autocomplete="off"><br>
-        <h5 class="form-signin-heading">Ingresa con los siguientes datos:</h5>
-        <h5 class="form-signin-heading">Usuario Administardor: SoyAdmin | Contraseña: uhss</h5>
-        <h5 class="form-signin-heading">Usuario Normal: SoyUsuario | Contraseña: pedros</h5>
+        
         <button class="btn btn-large btn-primary" type="submit">Acceder</button>
         <p>&nbsp;</p>
 

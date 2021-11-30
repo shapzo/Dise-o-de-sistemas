@@ -18,7 +18,7 @@
         $id=$_POST['id'];
         require('../../includes/confbd.php');
         global $conexion;
-        $sql="SELECT * FROM categoria WHERE id_categoria='$id'";
+        $sql="SELECT * FROM categorias WHERE id_categoria='$id'";
         $ejecucionSql=@mysqli_query($conexion,$sql);
 
         while ($registro = @mysqli_fetch_array($ejecucionSql,MYSQLI_ASSOC)) {
@@ -28,12 +28,12 @@
     ?>
     <form action="../../controller/categoria.php" method="post">
         <div class="form-group">
-            <label class="form-label" for="id_categoria">id_categoria</label>
+            <label class="form-label" for="id_categoria">Clave</label>
             <input type="text" class="form-control" name="id_categoria" id="id_categoria" value="<?php echo $id_categoria; ?>">
         </div>
         <div class="form-group">
             <label class="form-label" for="descripcion">T&iacute;tulo</label>
-            <input type="text" class="form-control" name="descripcion" id="tutulo" value="<?php echo $descripcion; ?>">
+            <input type="text" class="form-control" name="descripcion" id="descripcion" value="<?php echo $descripcion; ?>">
         </div>
         <input type="hidden" name="id" value="<?php echo $id ?>">
         <input type="hidden" name="tipoMovimiento" value="modificar">

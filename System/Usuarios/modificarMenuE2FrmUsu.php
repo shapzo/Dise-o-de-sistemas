@@ -23,7 +23,7 @@
 
         while ($registro = @mysqli_fetch_array($ejecucionSql,MYSQLI_ASSOC)) {
             $nombre=$registro['nombre'];
-            $apellido=$registro['apellido'];
+            $apellidos=$registro['apellidos'];
             $contra=$registro['contra'];
         }
     ?>
@@ -33,11 +33,11 @@
             <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $nombre; ?>">
         </div>
         <div class="form-group">
-            <label class="form-label" for="apellido">Apellido</label>
-            <input type="text" class="form-control" name="apellido" id="tutulo" value="<?php echo $apellido; ?>">
+            <label class="form-label" for="apellidos">Apellido</label>
+            <input type="text" class="form-control" name="apellidos" id="tutulo" value="<?php echo $apellidos; ?>">
         </div>
         <div class="form-group">
-            <label class="form-label" for="contra">Contraseña</label>
+            <label class="form-label" for="contra">contraseña</label>
             <input type="password" class="form-control" name="contra" id="tutulo" value="<?php echo $contra; ?>">
         </div>
         <input type="hidden" name="id" value="<?php echo $id ?>">

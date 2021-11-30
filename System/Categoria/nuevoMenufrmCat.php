@@ -50,7 +50,7 @@
 
                          <div class="form-group div-table">
                               <div class="form-group table table-striped table-hover">
-                                   <label class="form-label" for="id_categoria">Id</label>
+                                   <label class="form-label" for="id_categoria">Clave</label>
                                    <input type="text" class="form-control" name="id_categoria" id="id_categoria">
                               </div>
                               <div class="form-group table table-striped table-hover">

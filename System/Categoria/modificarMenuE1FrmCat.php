@@ -40,7 +40,7 @@
         <?php
         require('../../includes/confbd.php');
         global $conexion;
-        $sql = "SELECT * FROM categoria ORDER BY id_categoria  ASC";
+        $sql = "SELECT * FROM categorias ORDER BY id_categoria ASC";
         $ejecucionSql = @mysqli_query($conexion, $sql);
         $opcion = "";
         while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {

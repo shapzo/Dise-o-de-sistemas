@@ -42,7 +42,7 @@
         <?php
         require('../../includes/confbd.php');
         global $conexion;
-        $sql = "SELECT * FROM categoria WHERE estatus = 'Alta' ORDER BY descripcion ASC";
+        $sql = "SELECT * FROM categorias WHERE estatus = 'Alta' ORDER BY descripcion ASC";
         $ejecucionSql = @mysqli_query($conexion, $sql);
         $menus = "";
         while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {
