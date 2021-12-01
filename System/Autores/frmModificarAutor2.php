@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
+
 <head>
-<?php 
-include('../../includes/cabeceras2.php');
- ?>
+    <?php
+    include('../../includes/cabeceras2.php');
+    ?>
 </head>
+
 <body>
-<?php
-     $activa='frmModificarExerno2.php">Material Externo<span class="sr-only">(current)</span>';
-     global $activa;
-     require('../../includes/menus8.php'); ?>
+    <?php
+    $activa = 'frmModificarExerno2.php">Material Externo<span class="sr-only">(current)</span>';
+    global $activa;
+    require('../../includes/menus8.php'); ?>
     <h1>Modificar Materiales</h1>
 
-    <?php 
-        $id=$_POST['id'];
-        require('../../includes/confbd.php');
-        global $conexion;
-        $sql="SELECT * FROM material_externo WHERE id_externo='$id'";
-        $ejecucionSql=@mysqli_query($conexion,$sql);
-        while ($registro = @mysqli_fetch_array($ejecucionSql,MYSQLI_ASSOC)) {
-            $id_externo=$registro['id_externo'];
-            $titulo=$registro['titulo'];
-            $web=$registro['sitio_web'];
-        }
+    <?php
+    $id = $_POST['id'];
+    require('../../includes/confbd.php');
+    global $conexion;
+    $sql = "SELECT * FROM material_externo WHERE id_externo='$id'";
+    $ejecucionSql = @mysqli_query($conexion, $sql);
+    while ($registro = @mysqli_fetch_array($ejecucionSql, MYSQLI_ASSOC)) {
+        $id_externo = $registro['id_externo'];
+        $titulo = $registro['titulo'];
+        $web = $registro['sitio_web'];
+    }
     ?>
 
     <form action="materialExternoController.php" method="post">
-        
+
         <div class="form-group">
             <label for="titulo">Nombre de Material</label>
             <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $titulo; ?>">
@@ -43,5 +45,11 @@ include('../../includes/cabeceras2.php');
         <input class="btn btn-secondary" type="reset" name="limpiar" value="Limpiar">
     </form>
 
+    <!-- Footer-->
+    <?php
+    include('../../includes/footer.php');
+    ?>
+    
 </body>
+
 </html>

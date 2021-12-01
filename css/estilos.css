@@ -68,7 +68,7 @@ fonts {
   font-weight: 700;
 }
 #mainNav .navbar-brand {
-  color: #00c3ff;
+  color: #ecdd0d;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   letter-spacing: 0.0625em;
@@ -84,7 +84,7 @@ fonts {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #00a2ff;
+  color: #1cf100;
 }
 
 @media (min-width: 992px) {
@@ -276,6 +276,25 @@ fonts {
   transform: scale(1.3);
 }
 
+.animacionLogo {
+  animation-duration: 5s;
+  animation-name: animLogo;
+  animation-iteration-count: infinite;
+}
+@keyframes animLogo{
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotateY(0deg);
+  }
+  50%{
+      -webkit-transform: rotate(180deg);
+      transform: rotateY(180deg);
+  } to {
+      -webkit-transform: rotate(360deg);
+      transform: rotateY(360deg);
+      }
+}
+
 /*********************************************
 * USERS
 * AREA DE LOS USUARIOS
@@ -283,7 +302,7 @@ fonts {
 **********************************************
 
 
-*********AUTORES************************
+*********TABLAS DE CONSULTA************************
 */
 #portfolio .portfolio-item {
   max-width: 26rem;
@@ -390,12 +409,12 @@ fonts {
   margin: 1rem auto;
   width: 100%;
   max-width: 960px;
-  column-count: 3;
+  column-count: 2;
 }
 
 article {
   background: #6affdf;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 5px solid #5d51ff;
   margin: 0 0 20px 0;
   text-align: center;

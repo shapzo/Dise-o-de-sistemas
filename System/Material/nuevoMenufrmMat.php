@@ -8,41 +8,41 @@
 </head>
 
 <body background="../../img/ImgWallpAutors.jpg">
-     
+
      <?php
      $activa = 'nuevoMenufrmUsu.php">Nuevo licenciatura<span class="sr-only">(current)</span>';
      global $activa;
      require('../../includes/menus7.php');
      ?>
      <?php
-    require("../../includes/confbd.php");
-    global $conexion;
-    mysqli_set_charset($conexion, 'utf8');
+     require("../../includes/confbd.php");
+     global $conexion;
+     mysqli_set_charset($conexion, 'utf8');
 
-    $sql1 = "SELECT * FROM categorias ORDER BY id_categoria ASC";
-    $resultado = mysqli_query($conexion, $sql1);
-    while ($categoria = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-        @$listaCat .= "<option value  = $categoria[id_categoria]>$categoria[descripcion]</option>";
-    }
+     $sql1 = "SELECT * FROM categorias ORDER BY id_categoria ASC";
+     $resultado = mysqli_query($conexion, $sql1);
+     while ($categoria = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+          @$listaCat .= "<option value  = $categoria[id_categoria]>$categoria[descripcion]</option>";
+     }
 
-    $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
-    $resultado1 = mysqli_query($conexion, $sql2);
-    while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
-        @$listaEdit .= "<option value  = $editorial[id_editorial]>$editorial[descripcion]</option>";
-    }
+     $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
+     $resultado1 = mysqli_query($conexion, $sql2);
+     while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+          @$listaEdit .= "<option value  = $editorial[id_editorial]>$editorial[descripcion]</option>";
+     }
 
-    $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
-    $resultado1 = mysqli_query($conexion, $sql2);
-    while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
-     @$listaedit.= "<option value  = $editorial[sitio_web]>$editorial[sitio_web]</option>";
-    }
-    mysqli_close($conexion);
-    ?>
+     $sql2 = "SELECT * FROM editoriales ORDER BY descripcion ASC ";
+     $resultado1 = mysqli_query($conexion, $sql2);
+     while ($editorial = mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+          @$listaedit .= "<option value  = $editorial[sitio_web]>$editorial[sitio_web]</option>";
+     }
+     mysqli_close($conexion);
+     ?>
 
      <!--particulas-->
-    <div id="particles-js"></div>
-    <script src="../../particles/js/particles.min.js"></script>
-    <script src="../../particles/js/apps.js"></script>
+     <div id="particles-js"></div>
+     <script src="../../particles/js/particles.min.js"></script>
+     <script src="../../particles/js/apps.js"></script>
 
      <!--lcontenedor-->
      <header class="contenedor">
@@ -86,8 +86,8 @@
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="id_categoria">categoria</label>
                                    <?php
-                                    echo '<select class="form-control" id="id_categoria inputSeleccionado" name="id_categoria">' . $listaCat . '</select>';
-                                    ?>
+                                   echo '<select class="form-control" id="id_categoria inputSeleccionado" name="id_categoria">' . $listaCat . '</select>';
+                                   ?>
                               </div>
 
                               <!--<div class="form-group table table-striped table-hover">
@@ -95,13 +95,13 @@
                                    <input type="text" class="form-control" name="autor" id="autor">
                               </div>-->
 
-                              
+
 
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="id_editorial">Editorial</label>
                                    <?php
-                                    echo '<select class="form-control" id="id_editorial inputSeleccionado" name="id_editorial">' . $listaEdit . '</select>';
-                                    ?>
+                                   echo '<select class="form-control" id="id_editorial inputSeleccionado" name="id_editorial">' . $listaEdit . '</select>';
+                                   ?>
                               </div>
 
                               <div class="form-group table table-striped table-hover">
@@ -111,8 +111,8 @@
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="sitio_web">pagina web</label>
                                    <?php
-                                    echo '<select class="form-control" id="sitio_web inputSeleccionado" name="sitio_web">' . $listaedit . '</select>';
-                                    ?>
+                                   echo '<select class="form-control" id="sitio_web inputSeleccionado" name="sitio_web">' . $listaedit . '</select>';
+                                   ?>
                               </div>
                               <div class="form-group table table-striped table-hover">
                                    <label class="form-label" for="archivo">Subir Archivo</label>
@@ -126,7 +126,7 @@
                                    <label class="form-label" for="estatus">Estatus</label>
                                    <input type="text" class="form-control" name="estatus" id="estatus">
                               </div>
-                              
+
 
                               <input type="hidden" name="tipoMovimiento" value="nuevo">
                               <input class="btn btn-primary" type="submit" name="Guardar" value="Guardar">
@@ -139,19 +139,10 @@
      </header>
 
      <!-- Footer-->
-  <footer class="copyright py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
-                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+     <?php
+     include('../../includes/footer.php');
+     ?>
+
 </body>
 
 </html>

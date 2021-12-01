@@ -68,12 +68,10 @@
 
     </header>
 
-    <!--Parte inferior aluciva al copyright -->
-    <div class="copyright">
-        <p class="texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p class="texto_copy">Copyright &copy; 2021 </p>
-    </div>
+    <!-- Footer-->
+    <?php
+    include('../../includes/footer.php');
+    ?>
 
 </body>
 

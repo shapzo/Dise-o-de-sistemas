@@ -10,7 +10,7 @@
 <body>
     <div class="divs">
         <div align="left">
-            <img class="img-fluid rounded girls" loading="lazy" src="../img/table1.png" width="60%">
+            <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
         </div>
         <div>
             <table class="table table-striped table-hover">
@@ -34,7 +34,7 @@
 
         </div>
         <div align="right">
-            <img class="img-fluid rounded girls" loading="lazy" src="../img/table1.png" width="60%">
+            <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
         </div>
 
     </div>

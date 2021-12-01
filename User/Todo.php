@@ -37,6 +37,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Autores</div>
+                                <div class="portfolio-caption-subheading text-muted">Consulte los autores</div>
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Categorias</div>
-
+                                <div class="portfolio-caption-subheading text-muted">Consulte las categorias</div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Editoriales</div>
-
+                                <div class="portfolio-caption-subheading text-muted">Consulte las editoriales</div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +97,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Licenciaturas</div>
-
+                                <div class="portfolio-caption-subheading text-muted">Consulte las licenciaturas</div>
                             </div>
                         </div>
                     </div>
@@ -130,20 +131,10 @@
 
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
 
-    <!-- Footer-->
-    <footer class="copyright py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start texto_copy">Todos los derechos reservados, queda proivida su distribucion total o parcial</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a class="link-dark text-decoration-none me-3 texto_copy" href="#!">Politica de privacidad</a>
-                    <a class="link-dark text-decoration-none texto_copy" href="#!">Biblioteca RiUaemex</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!--area de l footer-->
+    <?php
+    include('../includes/footer.php');
+    ?>
 
     <!-- Portfolio Modals-->
     <!-- Portfolio item 1 autores-->
@@ -175,30 +166,37 @@
                                 mysqli_close($conexion);
 
                                 ?>
+                                <div class="divs">
+                                    <div align="left">
+                                        <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
 
-                                <table class="table table-striped table-hover">
-                                    <thead id="thed">
-                                        <tr id="tr">
-                                            <th id="th">Clave del material</th>
-                                            <th id="th">Clave del autor</th>
-                                            <th id="th">Nombre</th>
-                                            <th id="th">apellidos</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        foreach ($elautores as $autores) {
-                                            echo "<tr>";
-                                            echo "<td>" . $autores['id_material'] . "</td>";
-                                            echo "<td>" . $autores['id_autor'] . "</td>";
-                                            echo "<td>" . $autores['nombre'] . "</td>";
-                                            echo "<td>" . $autores['apellidos'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-
+                                    <table class="table table-striped table-hover">
+                                        <thead id="thed">
+                                            <tr id="tr">
+                                                <th id="th">Clave del material</th>
+                                                <th id="th">Clave del autor</th>
+                                                <th id="th">Nombre</th>
+                                                <th id="th">apellidos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($elautores as $autores) {
+                                                echo "<tr>";
+                                                echo "<td>" . $autores['id_material'] . "</td>";
+                                                echo "<td>" . $autores['id_autor'] . "</td>";
+                                                echo "<td>" . $autores['nombre'] . "</td>";
+                                                echo "<td>" . $autores['apellidos'] . "</td>";
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div align="right">
+                                        <img class="img-fluid rounded animacionLogo girls" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+                                </div>
 
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
@@ -240,26 +238,34 @@
                                 mysqli_close($conexion);
 
                                 ?>
+                                <div class="divs">
+                                    <div align="left">
+                                        <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
 
-                                <table class="table table-striped table-hover">
-                                    <thead id="thed">
-                                        <tr id="tr">
-                                            <th id="th">Clave de categoria</th>
-                                            <th id="th">Describcion</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        foreach ($elcategorias as $categorias) {
-                                            echo "<tr>";
-                                            echo "<td>" . $categorias['id_categoria'] . "</td>";
-                                            echo "<td>" . $categorias['descripcion'] . "</td>";
+                                    <table class="table table-striped table-hover">
+                                        <thead id="thed">
+                                            <tr id="tr">
+                                                <th id="th">Clave de categoria</th>
+                                                <th id="th">Describcion</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($elcategorias as $categorias) {
+                                                echo "<tr>";
+                                                echo "<td>" . $categorias['id_categoria'] . "</td>";
+                                                echo "<td>" . $categorias['descripcion'] . "</td>";
 
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div align="right">
+                                        <img class="img-fluid rounded animacionLogo girls" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+                                </div>
 
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
@@ -301,27 +307,36 @@
 
                                 ?>
 
-                                <table class="table table-striped table-hover">
-                                    <thead id="thed">
-                                        <tr id="tr">
-                                            <th id="th">Clave editorial</th>
-                                            <th id="th">Describcion</th>
-                                            <th id="th">Pagina web</th>
+                                <div class="divs">
+                                    <div align="left">
+                                        <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        foreach ($eleditoriales as $editoriales) {
-                                            echo "<tr>";
-                                            echo "<td>" . $editoriales['id_editorial'] . "</td>";
-                                            echo "<td>" . $editoriales['descripcion'] . "</td>";
-                                            echo "<td>" . $editoriales['sitio_web'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                    <table class="table table-striped table-hover">
+                                        <thead id="thed">
+                                            <tr id="tr">
+                                                <th id="th">Clave editorial</th>
+                                                <th id="th">Describcion</th>
+                                                <th id="th">Pagina web</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($eleditoriales as $editoriales) {
+                                                echo "<tr>";
+                                                echo "<td>" . $editoriales['id_editorial'] . "</td>";
+                                                echo "<td>" . $editoriales['descripcion'] . "</td>";
+                                                echo "<td>" . $editoriales['sitio_web'] . "</td>";
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div align="right">
+                                        <img class="img-fluid rounded animacionLogo girls" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+                                </div>
 
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
@@ -363,30 +378,39 @@
 
                                 ?>
 
-                                <table class="table table-striped table-hover">
-                                    <thead id="thed">
-                                        <tr id="tr">
-                                            <th id="th">Clave de usuario</th>
-                                            <th id="th">Nombre</th>
-                                            <th id="th">Apellido</th>
-                                            <th id="th">Clave de tipo de usuario</th>
-                                            <th id="th">Clave de licenciatura</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        foreach ($elusuarios as $usuarios) {
-                                            echo "<tr>";
-                                            echo "<td>" . $usuarios['id_usuario'] . "</td>";
-                                            echo "<td>" . $usuarios['nombre'] . "</td>";
-                                            echo "<td>" . $usuarios['apellidos'] . "</td>";
-                                            echo "<td>" . $usuarios['id_tipo_usuario'] . "</td>";
-                                            echo "<td>" . $usuarios['id_licenciatura'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                <div class="divs">
+                                    <div align="left">
+                                        <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+
+                                    <table class="table table-striped table-hover">
+                                        <thead id="thed">
+                                            <tr id="tr">
+                                                <th id="th">Clave de usuario</th>
+                                                <th id="th">Nombre</th>
+                                                <th id="th">Apellido</th>
+                                                <th id="th">Clave de tipo de usuario</th>
+                                                <th id="th">Clave de licenciatura</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($elusuarios as $usuarios) {
+                                                echo "<tr>";
+                                                echo "<td>" . $usuarios['id_usuario'] . "</td>";
+                                                echo "<td>" . $usuarios['nombre'] . "</td>";
+                                                echo "<td>" . $usuarios['apellidos'] . "</td>";
+                                                echo "<td>" . $usuarios['id_tipo_usuario'] . "</td>";
+                                                echo "<td>" . $usuarios['id_licenciatura'] . "</td>";
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div align="right">
+                                        <img class="img-fluid rounded animacionLogo girls" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+                                </div>
 
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
@@ -428,26 +452,36 @@
 
                                 ?>
 
-                                <table class="table table-striped table-hover">
-                                    <thead id="thed">
-                                        <tr id="tr">
-                                            <th id="th">Clave de licenciatura</th>
-                                            <th id="th">Describcion</th>
+                                <div class="divs">
+                                    <div align="left">
+                                        <img class="img-fluid rounded girls animacionLogo" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        foreach ($ellicenciaturas as $licenciaturas) {
-                                            echo "<tr>";
-                                            echo "<td>" . $licenciaturas['id_carrera'] . "</td>";
-                                            echo "<td>" . $licenciaturas['descripcion'] . "</td>";
+                                    <table class="table table-striped table-hover">
+                                        <thead id="thed">
+                                            <tr id="tr">
+                                                <th id="th">Clave de licenciatura</th>
+                                                <th id="th">Describcion</th>
 
-                                            echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($ellicenciaturas as $licenciaturas) {
+                                                echo "<tr>";
+                                                echo "<td>" . $licenciaturas['id_carrera'] . "</td>";
+                                                echo "<td>" . $licenciaturas['descripcion'] . "</td>";
+
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div align="right">
+                                        <img class="img-fluid rounded animacionLogo girls" loading="lazy" src="../img/table1.png" width="60%">
+                                    </div>
+                                </div>
+
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                     <i class="fas fa-times me-1"></i>
                                     Cerrar
@@ -469,6 +503,22 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
+
+                                <?php
+                                require('../includes/confbd.php');
+                                global $conexion;
+
+                                $elmaterial = array();
+                                $sqlmaterial = "SELECT * FROM material";
+                                $resultadomaterial = mysqli_query($conexion, $sqlmaterial);
+
+                                while ($material = mysqli_fetch_array($resultadomaterial, MYSQLI_ASSOC)) {
+                                    $elmaterial[] = $material;
+                                }
+                                mysqli_close($conexion);
+                                ?>
+
+
                                 <h2 class="text-uppercase">Libros de la biblioteca</h2>
                                 <p class="item-intro text-muted">Solo disponibles los que estan a la vista</p>
                                 <img class="img-fluid d-block mx-auto" src="../img/autors6.jpg" alt="..." />
