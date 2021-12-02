@@ -6,12 +6,12 @@ include("config/security.php")
 <html lang="Es">
 
 <head>
-    <?php 
+    <?php
     require('includes/cabeceras.php');
-     ?>
+    ?>
 </head>
 
-<body background="img/img1.jpg">
+<body background="img/img1.jpg">    
 
     <!--particulas-->
     <div id="particles-js"></div>

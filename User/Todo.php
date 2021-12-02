@@ -525,7 +525,7 @@
 
                                 <section class="section1">
                                     <article>
-                                        <a href="../Archivos/python.pdf">
+                                        <a href="../Archivos/python.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros1.png" />
                                                 <figcaption>Libro de Python</figcaption>
@@ -533,7 +533,7 @@
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="../Archivos/computoevolutivo.pdf">
+                                        <a href="../Archivos/computoevolutivo.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros2.jpeg" />
                                                 <figcaption>Libro de Computo Evolutivo</figcaption>
@@ -541,7 +541,7 @@
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="../Archivos/Tanenbaum-Sistemas-Operativos-Distribuidos.pdf">
+                                        <a href="../Archivos/Tanenbaum-Sistemas-Operativos-Distribuidos.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros3.jpg" />
                                                 <figcaption>Libro de Tanenbaum, Sistemas Operativos Distribuidos</figcaption>
@@ -549,7 +549,7 @@
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="../Archivos/DispositivosElectronicos-Floyd8Edi.pdf">
+                                        <a href="../Archivos/DispositivosElectronicos-Floyd8Edi.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros4.jpg" />
                                                 <figcaption>Libro de php DispositivosElectronicos-Floyd8Edi.</figcaption>
@@ -557,7 +557,7 @@
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="../Archivos/MCIinC.pdf">
+                                        <a href="../Archivos/MCIinC.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros5.jpg" />
                                                 <figcaption>Libro de php MCIinC</figcaption>
@@ -565,7 +565,7 @@
                                         </a>
                                     </article>
                                     <article>
-                                        <a href="../Archivos/UNEDConstrucciondecompiladoresprincipiosypractica-KennethCLouden-International_ThomsonEditores-2004.pdf">
+                                        <a href="../Archivos/UNEDConstrucciondecompiladoresprincipiosypractica-KennethCLouden-International_ThomsonEditores-2004.pdf" target="_blank">
                                             <figure>
                                                 <img loading="lazy" src="../img/libros6.jpg" />
                                                 <figcaption>Libro de UNED Construccionde compiladores principios y practica Kenneth C Louden</figcaption>

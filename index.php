@@ -16,7 +16,7 @@
     <div class="div1">
       <form name="form1" method="post" action="config/sesion.php" class="form-signin">
         <h2 class="form-signin-heading">Iniciar Sesion</h2>
-        <center><img src="img/logo.png" width=150 height=150 /><br></center>
+        <center><img class="img" src="img/logo.png" width=150 height=150 /><br></center>
         <input type="text" name="usuario" class="input-block-level" placeholder="Usuario" autocomplete="off">
         <input type="password" name="contra" class="input-block-level" placeholder="Contraseña" autocomplete="off"><br>
         

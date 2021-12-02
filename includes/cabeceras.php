@@ -23,3 +23,10 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
 </script>
+
+<!--cursor-->
+<style type="text/css">
+    * {
+        cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym761.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym761.png), auto !important;
+    }
+</style><a href="https://www.cursors-4u.com/cursor/2014/03/25/sexy-red-lips.html" target="_blank" title="Sexy Red Lips"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Sexy Red Lips" style="position:absolute; top: 0px; right: 0px;" /></a>
